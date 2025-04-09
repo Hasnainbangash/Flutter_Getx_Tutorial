@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -19,6 +20,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
         ],
       ),
+      floatingActionButton: FloatingActionButton(onPressed: (){
+        // Snackbar presents the message from the use that comes from the top of the mobile screen
+        Get.snackbar('Hasnain', 'Subscribe to my channel')
+      }),
     );
   }
 }
