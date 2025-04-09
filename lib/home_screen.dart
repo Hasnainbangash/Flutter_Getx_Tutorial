@@ -17,7 +17,25 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: [
-
+          Card(
+            child: ListTile(
+              title: Text('GetX Dialog Alert'),
+              subtitle: Text('GetX dialog alert with getX'),
+              onTap: (){
+                Get.defaultDialog(
+                  title: 'Delete Chat',
+                  titlePadding: EdgeInsets.only(top: 20.0),
+                  contentPadding: EdgeInsets.all(20),
+                  middleText: 'Are you sure you want to delete this chat?',
+                  // Build in yes or no
+                  // textConfirm: 'Yes',
+                  // textCancel: 'No',
+                  confirm: TextButton(onPressed: (){}, child: Text('Ok')),
+                  cancel: TextButton(onPressed: (){}, child: Text('Cancel'))
+                );
+              },
+            ),
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(onPressed: (){
