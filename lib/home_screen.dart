@@ -30,7 +30,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   // Build in yes or no
                   // textConfirm: 'Yes',
                   // textCancel: 'No',
-                  confirm: TextButton(onPressed: (){}, child: Text('Ok')),
+                  confirm: TextButton(onPressed: (){
+                    //  Using the default way to close the dialog
+                    // Navigator.pop(context);
+
+                    // Using the getX way to close the dialog
+                    Get.back();
+                  }, child: Text('Ok')),
                   cancel: TextButton(onPressed: (){}, child: Text('Cancel'))
                 );
               },
