@@ -26,6 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   title: 'Delete Chat',
                   titlePadding: EdgeInsets.only(top: 20.0),
                   contentPadding: EdgeInsets.all(20),
+                  // Middle text canno be more than three lines so we use the content than
                   middleText: 'Are you sure you want to delete this chat?',
                   // Build in yes or no
                   // textConfirm: 'Yes',
@@ -37,7 +38,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     // Using the getX way to close the dialog
                     Get.back();
                   }, child: Text('Ok')),
-                  cancel: TextButton(onPressed: (){}, child: Text('Cancel'))
+                  cancel: TextButton(onPressed: (){}, child: Text('Cancel')),
+                  // Like in content we can design the dialog according to our requirements
+                  content: Column(
+                    children: [
+                      Text('Hello')
+                    ],
+                  ),
                 );
               },
             ),
