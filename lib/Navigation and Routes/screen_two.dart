@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:flutter_getx_tutorial/Navigation and Routes/screen_two.dart';
 
-class ScreenOne extends StatefulWidget {
-  const ScreenOne({super.key});
+class ScreenTwo extends StatefulWidget {
+  const ScreenTwo({super.key});
 
   @override
-  State<ScreenOne> createState() => _ScreenOneState();
+  State<ScreenTwo> createState() => _ScreenTwoState();
 }
 
-class _ScreenOneState extends State<ScreenOne> {
+class _ScreenTwoState extends State<ScreenTwo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Screen One'),
+        title: Text('Screen Two'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -26,12 +25,13 @@ class _ScreenOneState extends State<ScreenOne> {
               // Navigator.pop(context);
 
               // New way using the getx to go back
-              Get.to(ScreenTwo());
-            }, child: Text('Go To Screen Two')),
+              Get.back();
+            }, child: Text('Go Back')),
           ),
         ],
       ),
     );
   }
 }
+
 
