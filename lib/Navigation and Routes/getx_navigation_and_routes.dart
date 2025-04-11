@@ -26,7 +26,8 @@ class _NavigationAndRoutesState extends State<NavigationAndRoutes> {
               // Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenOne()));
 
               // GetX way to move to another screen
-              Get.to(ScreenOne());
+              // Passing the name to the screenone to show it on the navigation bar
+              Get.to(ScreenOne(name: 'Hasnain'));
             }, child: Text('Go to next screen')),
           ),
         ],
