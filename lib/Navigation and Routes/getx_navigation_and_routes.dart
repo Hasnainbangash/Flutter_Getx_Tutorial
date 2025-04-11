@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter_getx_tutorial/Navigation and Routes/screen_one.dart';
 
 class NavigationAndRoutes extends StatefulWidget {
   const NavigationAndRoutes({super.key});
@@ -20,7 +21,13 @@ class _NavigationAndRoutesState extends State<NavigationAndRoutes> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Center(
-            child: TextButton(onPressed: (){}, child: Text('Go to next screen')),
+            child: TextButton(onPressed: (){
+              // Old way to move to the next page
+              // Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenOne()));
+
+              // GetX way to move to another screen
+              Get.to(ScreenOne());
+            }, child: Text('Go to next screen')),
           ),
         ],
       ),

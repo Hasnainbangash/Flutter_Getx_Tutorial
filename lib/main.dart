@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_tutorial/home_screen.dart';
-import 'package:flutter_getx_tutorial/getx_navigation_and_routes.dart';
+import 'package:flutter_getx_tutorial/Navigation and Routes/getx_navigation_and_routes.dart';
 import 'package:get/get.dart';
 
 void main() {
