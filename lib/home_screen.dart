@@ -26,7 +26,39 @@ class _HomeScreenState extends State<HomeScreen> {
                   title: 'Delete Chat',
                   titlePadding: EdgeInsets.only(top: 20.0),
                   contentPadding: EdgeInsets.all(20),
-                  // Middle text canno be more than three lines so we use the content than
+                  // Middle text cannot be more than three lines so we use the content than
+                  middleText: 'Are you sure you want to delete this chat?',
+                  // Build in yes or no
+                  // textConfirm: 'Yes',
+                  // textCancel: 'No',
+                  confirm: TextButton(onPressed: (){
+                    //  Using the default way to close the dialog
+                    // Navigator.pop(context);
+
+                    // Using the getX way to close the dialog
+                    Get.back();
+                  }, child: Text('Ok')),
+                  cancel: TextButton(onPressed: (){}, child: Text('Cancel')),
+                  // Like in content we can design the dialog according to our requirements
+                  content: Column(
+                    children: [
+                      Text('Hello')
+                    ],
+                  ),
+                );
+              },
+            ),
+          ),
+          Card(
+            child: ListTile(
+              title: Text('GetX Dialog Alert'),
+              subtitle: Text('GetX dialog alert with getX'),
+              onTap: (){
+                Get.defaultDialog(
+                  title: 'Delete Chat',
+                  titlePadding: EdgeInsets.only(top: 20.0),
+                  contentPadding: EdgeInsets.all(20),
+                  // Middle text cannot be more than three lines so we use the content than
                   middleText: 'Are you sure you want to delete this chat?',
                   // Build in yes or no
                   // textConfirm: 'Yes',
