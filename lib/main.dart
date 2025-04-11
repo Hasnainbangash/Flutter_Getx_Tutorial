@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_tutorial/home_screen.dart';
+import 'package:flutter_getx_tutorial/getx_navigation_and_routes.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const HomeScreen(),
+      // home: const HomeScreen(),
+      home: const NavigationAndRoutes(),
     );
   }
 }
