@@ -30,7 +30,10 @@ class _NavigationAndRoutesState extends State<NavigationAndRoutes> {
               // Get.to(ScreenOne(name: 'Hasnain'));
               
               // By using the routes to go to next screen
-              Get.toNamed('/screenOne')
+              Get.toNamed('/screenOne', arguments: [
+                'Hasnain',
+                'My name is this'
+              ]);
             }, child: Text('Go to next screen')),
           ),
         ],
