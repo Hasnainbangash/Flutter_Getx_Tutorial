@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ScreenOne extends StatefulWidget {
   const ScreenOne({super.key});
@@ -19,7 +20,13 @@ class _ScreenOneState extends State<ScreenOne> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Center(
-            child: TextButton(onPressed: (){}, child: Text('Go to next screen')),
+            child: TextButton(onPressed: (){
+              // Classic way to move to back screen
+              // Navigator.pop(context);
+
+              // New way using the getx to go back
+              Get.back();
+            }, child: Text('Go Back')),
           ),
         ],
       ),
