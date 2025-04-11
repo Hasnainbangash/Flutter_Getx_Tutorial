@@ -25,6 +25,8 @@ class _ScreenTwoState extends State<ScreenTwo> {
               // Navigator.pop(context);
 
               // New way using the getx to go back
+              // On is to add the two times back to go from 2nd screen to the main screen
+              Get.back();
               Get.back();
             }, child: Text('Go Back')),
           ),

@@ -3,7 +3,10 @@ import 'package:get/get.dart';
 import 'package:flutter_getx_tutorial/Navigation and Routes/screen_two.dart';
 
 class ScreenOne extends StatefulWidget {
-  const ScreenOne({super.key});
+  final String name;
+
+  // Getting the name by using the constructor
+  const ScreenOne({super.key, this.name = ''});
 
   @override
   State<ScreenOne> createState() => _ScreenOneState();
