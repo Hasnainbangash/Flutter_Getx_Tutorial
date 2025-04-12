@@ -11,6 +11,10 @@ class GetXHeightAndWidth extends StatefulWidget {
 class _GetXHeightAndWidthState extends State<GetXHeightAndWidth> {
   @override
   Widget build(BuildContext context) {
+
+    // Classic way to get the height
+    final height = MediaQuery.of(context).size.height;
+
     return Scaffold(
       appBar: AppBar(
         title: Text('GetX Tutorials'),
@@ -22,8 +26,12 @@ class _GetXHeightAndWidthState extends State<GetXHeightAndWidth> {
         // Using the media query to get height
         // height: MediaQuery.of(context).size.height * 0.3,
 
-        // Using the getx to get height
-        height: Get.height * 0.3,
+        // Using the classic way to give height
+        // height: height * .2,
+
+        // Using the getx to give height and width
+        height: Get.height * 0.2,
+        width: Get.width * .8,
         color: Colors.red,
         child: Center(
           child: Text('Center'),
