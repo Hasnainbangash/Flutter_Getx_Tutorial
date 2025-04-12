@@ -3,6 +3,7 @@ import 'package:flutter_getx_tutorial/home_screen.dart';
 import 'package:flutter_getx_tutorial/Navigation and Routes/getx_navigation_and_routes.dart';
 import 'package:flutter_getx_tutorial/Navigation and Routes/screen_one.dart';
 import 'package:flutter_getx_tutorial/Navigation and Routes/screen_Two.dart';
+import 'package:flutter_getx_tutorial/getx_height_and_width.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -20,14 +21,21 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
+
+      // For getx utils
       // home: const HomeScreen(),
-      home: const NavigationAndRoutes(),
-      // Added the routes to to the screens
-      getPages: [
-        GetPage(name: '/', page: () => NavigationAndRoutes()),
-        GetPage(name: '/screenOne', page: () => ScreenOne()),
-        GetPage(name: '/screenTwo', page: () => ScreenTwo()),
-      ],
+
+      // // For navigation and routes
+      // home: const NavigationAndRoutes(),
+      // // Added the routes to to the screens
+      // getPages: [
+      //   GetPage(name: '/', page: () => NavigationAndRoutes()),
+      //   GetPage(name: '/screenOne', page: () => ScreenOne()),
+      //   GetPage(name: '/screenTwo', page: () => ScreenTwo()),
+      // ],
+
+      // For getx height and width
+      home: const GetXHeightAndWidth(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class GetXHeightAndWidth extends StatefulWidget {
   const GetXHeightAndWidth({super.key});
@@ -14,16 +15,19 @@ class _GetXHeightAndWidthState extends State<GetXHeightAndWidth> {
       appBar: AppBar(
         title: Text('GetX Tutorials'),
       ),
-      body: Column(
-        children: [
-          Container(
-            height: 200,
-            color: Colors.red,
-            child: Center(
-              child: Text('Center'),
-            ),
-          ),
-        ],
+      body: Container(
+        // Simple way to give the height
+        // height: 100,
+
+        // Using the media query to get height
+        // height: MediaQuery.of(context).size.height * 0.3,
+
+        // Using the getx to get height
+        height: Get.height * 0.3,
+        color: Colors.red,
+        child: Center(
+          child: Text('Center'),
+        ),
       ),
     );
   }
