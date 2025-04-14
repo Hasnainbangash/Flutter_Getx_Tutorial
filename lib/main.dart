@@ -18,6 +18,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
+      // locale: Locale('en', 'US'),
+      // Fallback kehte hain ke agr ap ke pass koi be langauge ni select 
+      fallbackLocale: Locale('en', 'US'),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
@@ -36,6 +39,9 @@ class MyApp extends StatelessWidget {
 
       // For getx height and width
       home: const GetXHeightAndWidth(),
+
+      // For getx localization
+
     );
   }
 }
