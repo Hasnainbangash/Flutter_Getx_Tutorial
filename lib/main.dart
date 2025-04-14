@@ -4,6 +4,8 @@ import 'package:flutter_getx_tutorial/Navigation and Routes/getx_navigation_and_
 import 'package:flutter_getx_tutorial/Navigation and Routes/screen_one.dart';
 import 'package:flutter_getx_tutorial/Navigation and Routes/screen_Two.dart';
 import 'package:flutter_getx_tutorial/getx_height_and_width.dart';
+import 'package:flutter_getx_tutorial/Langauges and Localization/languages.dart';
+import 'package:flutter_getx_tutorial/Langauges and Localization/getxLocalization.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -18,9 +20,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
+
+      //
       // locale: Locale('en', 'US'),
-      // Fallback kehte hain ke agr ap ke pass koi be langauge ni select 
+
+      // For translation using the languages file
+      translations: Languages(),
+
+      // Fallback kehte hain ke agr ap ke pass koi be language ni select
       fallbackLocale: Locale('en', 'US'),
+
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
@@ -38,9 +47,10 @@ class MyApp extends StatelessWidget {
       // ],
 
       // For getx height and width
-      home: const GetXHeightAndWidth(),
+      // home: const GetXHeightAndWidth(),
 
       // For getx localization
+      home: const Getxlocalization(),
 
     );
   }
