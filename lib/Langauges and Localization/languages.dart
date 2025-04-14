@@ -7,6 +7,10 @@ class Languages extends Translations {
     'en_US': {
       'message': 'What is your name',
       'name': 'Hasnain'
+    },
+    'ur_PK': {
+      'message': 'آپ کا نام کیا ہے؟',
+      'name': 'حسنین'
     }
   };
 

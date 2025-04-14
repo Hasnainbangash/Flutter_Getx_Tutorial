@@ -21,11 +21,12 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
 
-      //
+      // Added the locale language to the app
       // locale: Locale('en', 'US'),
 
       // For translation using the languages file
       translations: Languages(),
+      locale: Locale('en', 'US'),
 
       // Fallback kehte hain ke agr ap ke pass koi be language ni select
       fallbackLocale: Locale('en', 'US'),

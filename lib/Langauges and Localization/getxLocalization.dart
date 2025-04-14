@@ -16,10 +16,33 @@ class _GetxlocalizationState extends State<Getxlocalization> {
         title: Text('GetX Tutorials'),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           ListTile(
+            // Here tr means the translation
             title: Text('message'.tr),
             subtitle: Text('name'),
+          ),
+
+          SizedBox(
+            height: 50,
+          ),
+
+          Row(
+            children: [
+              OutlinedButton(onPressed: (){
+                Get.updateLocale(Locale('en', 'US'));
+              }, child: Text('English')),
+
+              SizedBox(
+                width: 20,
+              ),
+
+              OutlinedButton(onPressed: (){
+                Get.updateLocale(Locale('ur', 'PK'));
+              }, child: Text('Urdu'))
+            ],
           ),
         ],
       ),
