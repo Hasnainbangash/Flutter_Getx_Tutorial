@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
 
       // For translation using the languages file
       translations: Languages(),
-      locale: Locale('en', 'US'),
+      locale: Locale('ur', 'PK'),
 
       // Fallback kehte hain ke agr ap ke pass koi be language ni select
       fallbackLocale: Locale('en', 'US'),
